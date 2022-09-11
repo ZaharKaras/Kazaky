@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e937504192fdbb54eab4dda570004022, type: 3}
+  m_Name: Archer
+  m_EditorClassIdentifier: 
+  type: 2
+  playerPrefabs: {fileID: 8017166455422348441, guid: 5e8aacc3cc8171641949f2c7dde778e9,
+    type: 3}
+  enemyPrefabs: {fileID: 8017166455422348441, guid: 3540902c96145394e94008dc68ca5b56,
+    type: 3}
+  baseStats:
+    name: Archer
+    cost: 100
+    aggroRange: 10
+    attackSpeed: 1
+    attackRange: 7
+    damage: 25
+    hp: 100
+    armor: 0
+    speed: 1
