@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e937504192fdbb54eab4dda570004022, type: 3}
+  m_Name: Warrior
+  m_EditorClassIdentifier: 
+  type: 1
+  playerPrefabs: {fileID: 1670430890539265364, guid: d8a791c56a142d54ebc21f70a1e86cf8,
+    type: 3}
+  enemyPrefabs: {fileID: 1670430890539265364, guid: 2a8de2538ec44144c8d60d168fe1396c,
+    type: 3}
+  baseStats:
+    name: Warrior
+    cost: 100
+    aggroRange: 10
+    attackSpeed: 2
+    attackRange: 1
+    damage: 25
+    hp: 100
+    armor: 100
+    speed: 13
