@@ -6,7 +6,7 @@ public class InputHandler : MonoBehaviour
 {
     public static InputHandler instance;
 
-    private RaycastHit hit; //what we hit with out ray
+    private RaycastHit hit; //what we hit without ray
 
     public List<Transform> selectedUnits = new List<Transform>();
 
