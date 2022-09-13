@@ -31,6 +31,16 @@ public class InputHandler : MonoBehaviour
         }
     }
 
+    private void CanvasOn(string name)
+    {
+        GameObject canva = GameObject.FindGameObjectWithTag("Canvas");
+        canva.transform.Find("RightHub(building)").gameObject.SetActive(false);
+        canva.transform.Find("RightHub(base)").gameObject.SetActive(false);
+        canva.transform.Find("RightHub(barrak)").gameObject.SetActive(false);
+
+        canva.transform.Find(name).gameObject.SetActive(true);
+    }
+
     public void HandleUnitMovement()
     {
         if (Input.GetMouseButtonDown(0))
@@ -38,6 +48,12 @@ public class InputHandler : MonoBehaviour
             mousePosition = Input.mousePosition;
             //create a ray
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if(selectedBuilding != null)
+            {
+                selectedBuilding.Find("Highlight").gameObject.SetActive(false);
+            }
+
             //check if we hit something
             if (Physics.Raycast(ray, out hit))
             {
@@ -47,24 +63,33 @@ public class InputHandler : MonoBehaviour
                 switch (layerHit.value)
                 {
                     case 8: // Units layer
-                        //do something
+                            //do something
+                        CanvasOn("RightHub(building)");
                         SelectUnit(hit.transform, Input.GetKey(KeyCode.LeftShift));
                         break;
-                    //case 10: // Minerals
-                    //    selectedBuilding = hit.transform;
-                    //    selectedBuilding.gameObject.SetActive(true);
-                    //    break;
-                    //case 11: // Storage Building
-                    //    selectedBuilding = hit.transform;
-                    //    selectedBuilding.gameObject.SetActive(true);
-                    //    break;
+                    case 10: // Minerals
+                        CanvasOn("RightHub(building)");
+                        selectedBuilding = hit.transform;
+                        selectedBuilding.Find("Highlight").gameObject.SetActive(true);
+                        break;
+                    case 11: // Storage Building
+                        CanvasOn("RightHub(base)");
+                        selectedBuilding = hit.transform;
+                        selectedBuilding.Find("Highlight").gameObject.SetActive(true);
+                        break;
+                    case 12: // Barrak
+                        CanvasOn("RightHub(barrak)");
+                        selectedBuilding = hit.transform;
+                        selectedBuilding.Find("Highlight").gameObject.SetActive(true);
+                        break;
                     default: // if nothing happens
-                        //do something
+                             //do something
+                        CanvasOn("RightHub(building)");
                         isDragging = true;
                         DeselectUnits();
                         if (selectedBuilding != null)
                         {
-                            selectedBuilding.gameObject.SetActive(false);
+                            selectedBuilding.Find("Highlight").gameObject.SetActive(false);
                         }
                         break;
                 }
@@ -114,6 +139,7 @@ public class InputHandler : MonoBehaviour
                             pU.aggroUnit = eU;
                             pU.hasAggro = true;
                             pU.isSelected = false;
+                            pU.isGathering = false;
                         }
 
                         //foreach (var unit in selectedUnits)
@@ -125,14 +151,14 @@ public class InputHandler : MonoBehaviour
                         break;
                     case 10: //minerals
 
-                        //hit.transform.Find("Highlight").gameObject.SetActive(true);
+                        hit.transform.Find("Highlight").gameObject.SetActive(true);
 
-                        //for (int i = 0; i < selectedUnits.Count; i++)
-                        //{
-                        //    PlayerUnit pU = selectedUnits[i].gameObject.GetComponent<PlayerUnit>();
-                        //    pU.isGathered = true;
-                        //    pU.mine = hit.transform;
-                        //}
+                        for (int i = 0; i < selectedUnits.Count; i++)
+                        {
+                            PlayerUnit pU = selectedUnits[i].gameObject.GetComponent<PlayerUnit>();
+                            pU.isGathering = true;
+                            pU.mine = hit.transform;
+                        }
 
                         break;
                     default: // if nothing happens
@@ -153,6 +179,7 @@ public class InputHandler : MonoBehaviour
                             {
                                 pU.aggroTarget.Find("Highlight").gameObject.SetActive(false);
                                 pU.hasAggro = false;
+                                pU.isGathering = false;
                             }
                         }
                         break;
