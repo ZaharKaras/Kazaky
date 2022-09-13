@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e937504192fdbb54eab4dda570004022, type: 3}
-  m_Name: Warrior
+  m_Name: Crystal
   m_EditorClassIdentifier: 
-  type: 1
-  playerPrefabs: {fileID: 1670430890539265364, guid: d8a791c56a142d54ebc21f70a1e86cf8,
+  type: 3
+  playerPrefabs: {fileID: 2636862149494516744, guid: 3a5af1b5c80c2924aa01570168787dc1,
     type: 3}
-  enemyPrefabs: {fileID: 1670430890539265364, guid: 2a8de2538ec44144c8d60d168fe1396c,
+  enemyPrefabs: {fileID: 2636862149494516744, guid: 3a5af1b5c80c2924aa01570168787dc1,
     type: 3}
   baseStats:
-    name: Warrior
-    cost: 100
-    aggroRange: 10
-    attackSpeed: 2
-    attackRange: 2
-    damage: 25
-    hp: 100
-    armor: 100
-    speed: 13
+    name: 'Crystal '
+    cost: 0
+    aggroRange: 0
+    attackSpeed: 0
+    attackRange: 0
+    damage: 0
+    hp: 500
+    armor: 500
+    speed: 0
