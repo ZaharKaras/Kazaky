@@ -7,7 +7,7 @@ public class UnitHandler : MonoBehaviour
     public static UnitHandler instance;
 
     [SerializeField]
-    private UnitStats worker, warrior, archer, crystal;
+    private UnitStats worker, warrior, archer;
 
     public LayerMask pUnitLayer, eUnitLayer;
     private void Awake()
@@ -34,9 +34,6 @@ public class UnitHandler : MonoBehaviour
                 break;
             case "archer":
                 unit = archer;
-                break;
-            case "crystal":
-                unit = crystal;
                 break;
             default:
                 Debug.Log($"UnitStats Type:{type} could not be found or dows not exist");
