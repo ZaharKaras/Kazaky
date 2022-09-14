@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1545458556398388028}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 1.92, y: 0, z: 1.94}
+  m_LocalPosition: {x: 1.92, y: 0.1, z: 1.94}
   m_LocalScale: {x: 32, y: 32, z: 2.3333335}
   m_Children: []
   m_Father: {fileID: 3709611604459448715}
@@ -201,7 +201,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 2, y: 1.5, z: 2}
+  m_Extents: {x: 2.25, y: 1.5, z: 2.25}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
@@ -220,6 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainRenderer: {fileID: 7860419797715723289}
+  price: 400
   defauitColor: {r: 0.011213961, g: 0.33962262, b: 0.04646937, a: 1}
   cellsize: 1
   weight: 12
