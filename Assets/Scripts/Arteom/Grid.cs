@@ -38,7 +38,7 @@ public class Grid
                 Debug.DrawLine(GetWorlPosition(x, y) + new Vector3(0.5f, 0, 0.5f), GetWorlPosition(x, y) + new Vector3(0.5f, 0, 0.5f) + Vector3.up * 3f, Color.red, 100f);
                 if (Physics.Raycast(new Vector3(x,-1,y) * cellsize + new Vector3(0.5f,0,0.5f),Vector3.up, out upHit, 10f))
                 {
-                    Debug.Log(upHit.point.x + ", " + upHit.point.z);
+                    //Debug.Log(upHit.point.x + ", " + upHit.point.z);
                     gridArray[x, y] = -1;
                     if (flag)
                     {

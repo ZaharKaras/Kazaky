@@ -35,8 +35,6 @@ public class buildingGrid : MonoBehaviour
     }
 
 
-
-
     // Update is called once per frame
     void Update()
     {
@@ -85,14 +83,14 @@ public class buildingGrid : MonoBehaviour
 
                 if (Input.GetMouseButtonDown(0))
                 {
-                    if (available)
+                    if (available && GetComponent<goldManager>().GetPrice(flyBuilding.price))
                     { 
-                         Debug.Log("1)" + x + "," + y);
+                         //Debug.Log("1)" + x + "," + y);
                          for (int i = 0; i < flyBuilding.weight; i++)
                          {
                            for (int j = 0; j < flyBuilding.height; j++)
                              {
-                              Debug.Log(x + "," + y);
+                              //Debug.Log(x + "," + y);
                              buildingMap.setValue(x + i, y + j, -1);
                             }
                         }

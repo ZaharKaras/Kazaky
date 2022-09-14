@@ -114,6 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainRenderer: {fileID: 3402383126692492040}
+  price: 150
   defauitColor: {r: 0.764151, g: 0.7409862, b: 0, a: 1}
   cellsize: 1
   weight: 10
@@ -156,7 +157,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7270093710277630055}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 4.8, y: 0, z: 4.63}
+  m_LocalPosition: {x: 4.8, y: 0.1, z: 4.63}
   m_LocalScale: {x: 64, y: 64, z: 7}
   m_Children: []
   m_Father: {fileID: 385388828404907381}

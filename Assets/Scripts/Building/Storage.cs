@@ -2,13 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Storage : MonoBehaviour
 {
-    static public int minerals = 0;
+
+    public static int minerals = 0;
 
     public void TakeMinerals(int amount)
     {
         minerals += amount;
     }
+
+    public int GetAmountMinerals()
+    {
+        return minerals;
+    }
+
+    public void TakeCost(int price)
+    {
+        minerals -= price;
+    } 
 
 }

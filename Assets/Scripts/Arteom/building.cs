@@ -5,6 +5,7 @@ using UnityEngine;
     public class building : MonoBehaviour
     {
         public Renderer mainRenderer;
+    public int price; 
 
         public Color defauitColor;
 
