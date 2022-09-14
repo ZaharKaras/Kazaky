@@ -10,8 +10,7 @@ public class UnitStats : ScriptableObject
     {
         Worker,
         Warrior,
-        Archer,
-        Crystal
+        Archer
     }
 
     [Space(15)]
