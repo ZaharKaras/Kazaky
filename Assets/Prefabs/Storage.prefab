@@ -219,8 +219,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9c619f42d0907d4eab7c172a5fcbe43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainRenderer: {fileID: 0}
-  defauitColor: {r: 0, g: 0, b: 0, a: 0}
+  mainRenderer: {fileID: 7860419797715723289}
+  defauitColor: {r: 0.011213961, g: 0.33962262, b: 0.04646937, a: 1}
   cellsize: 1
   weight: 12
   height: 12
@@ -311,6 +311,12 @@ PrefabInstance:
 --- !u!4 &8977771268929947807 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f8655e18ef8421b4a9534d6f1ba76616,
+    type: 3}
+  m_PrefabInstance: {fileID: 8871469055651508084}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &7860419797715723289 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7635826562936255635, guid: f8655e18ef8421b4a9534d6f1ba76616,
     type: 3}
   m_PrefabInstance: {fileID: 8871469055651508084}
   m_PrefabAsset: {fileID: 0}
